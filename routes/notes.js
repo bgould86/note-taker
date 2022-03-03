@@ -1,26 +1,35 @@
 const notes = require("express").Router();
+const fs = require("fs");
+const util = require("util");
+const { readAndAppend, readFromFile } = require("../helpers/fsUtils");
+const { v4: uuidv4 } = require("uuid");
 
 //GET route for retrieving notes
-notes.get("/", (req, res) => {
+notes.get("/notes", (req, res) => {
   readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)));
 });
 
 //POST route for new notes
-notes.post("/", (req, res) => {
-  console.log(req.body);
+notes.post("/notes", (req, res) => {
+  const { title, text } = req.body;
 
-  const { noteTitle, noteText } = req.body;
-
-  if (req.body) {
+  if (title && text) {
     const newNote = {
-      noteTitle,
-      noteText,
+      title,
+      text,
+      feedback_id: uuidv4(),
     };
 
     readAndAppend(newNote, "./db/db.json");
-    res.json(`Note added successfully 🚀`);
+
+    const response = {
+      status: "success",
+      body: newNote,
+    };
+
+    res.json(response);
   } else {
-    res.error("Error in adding note");
+    res.json("Error in posting note");
   }
 });
 
