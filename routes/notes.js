@@ -33,18 +33,15 @@ notes.post("/notes", (req, res) => {
   }
 });
 
+//DELETE route for existing notes
 notes.delete("/notes/:id", (req, res) => {
   const noteId = req.params.id;
   readFromFile("./db/db.json")
     .then((data) => JSON.parse(data))
     .then((json) => {
       const result = json.filter((note) => note.id !== noteId);
-
-      // Save that array to the filesystem
       writeToFile("./db/db.json", result);
-
-      // Respond to the DELETE request
-      res.json(`Item ${noteId} has been deleted 🗑️`);
+      res.json(`Your note has been deleted`);
     });
 });
 
