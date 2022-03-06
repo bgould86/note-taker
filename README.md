@@ -45,4 +45,4 @@ If you have any questions, please contact:
 ## Links
 
 - Here is the repo: [https://github.com/bgould86/note-taker](https://github.com/bgould86/note-taker)
-- Here is the live application: [https://www.youtube.com/watch?v=E0dODUwx6Co](https://www.youtube.com/watch?v=E0dODUwx6Co)
+- Here is the live application: [https://note-taker-bdg.herokuapp.com/](https://note-taker-bdg.herokuapp.com/)
