@@ -1,7 +1,5 @@
 # 11 Express.js: Note Taker
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-
 ## Description
 
 Create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
@@ -15,7 +13,6 @@ Create an application called Note Taker that can be used to write and save notes
 - [Tests](#tests)
 - [Questions](#questions)
 - [Links](#links)
-- [License](#license)
 
 ## Screenshot
 
@@ -49,7 +46,3 @@ If you have any questions, please contact:
 
 - Here is the repo: [https://github.com/bgould86/note-taker](https://github.com/bgould86/note-taker)
 - Here is the live application: [https://www.youtube.com/watch?v=E0dODUwx6Co](https://www.youtube.com/watch?v=E0dODUwx6Co)
-
-## License
-
-This project is licnesed by the MIT license.
