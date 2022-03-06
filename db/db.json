@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "title": "This is a note",
+        "text": "And this is another part of the note.",
+        "id": "c1c23ed9-285f-431b-ae46-5298913f14f8"
+    },
+    {
+        "title": "Here is a second note",
+        "text": "And here is the rest of the second note.",
+        "id": "70b96b83-6361-4a57-bea6-99c9431e72a2"
+    }
+]
